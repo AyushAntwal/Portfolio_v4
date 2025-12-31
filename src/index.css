@@ -1,0 +1,63 @@
+@import "tailwindcss";
+@import "@fontsource/montserrat/400.css"; /* Regular */
+@import "@fontsource/montserrat/300.css"; /* Light */
+@import "@fontsource/montserrat/600.css"; /* SemiBold */
+
+:root {
+  font-family: "Montserrat", Arial, sans-serif;
+  line-height: 1;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Custom slow spin animation */
+@layer utilities {
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-spin-slow {
+    animation: spin 90s linear infinite;
+  }
+}
+
+@keyframes radial-move {
+  0%, 100% {
+    background-position: 100% 100%;
+  }
+  50% {
+    background-position: 0% 0%;
+  }
+}
+
+.bg-radial-animate {
+  @apply bg-no-repeat bg-cover;
+  background-image: radial-gradient(circle at center, var(--color-gray-950), var(--color-gray-900), var(--color-gray-700));
+  background-size: 150% 150%;
+  animation: radial-move 9s ease-in-out infinite;
+}
