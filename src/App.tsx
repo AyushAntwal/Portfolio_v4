@@ -1,7 +1,6 @@
 import Avatar from "./sections/Avatar";
 import Footer from "./sections/Footer";
 import bgImage from "./assets/gradient-bg.png";
-import frame1 from "./assets/Frame_4.png";
 import Experiences from "./sections/Experiences";
 
 import TechStackOrbit from "./sections/TechStackOrbit";

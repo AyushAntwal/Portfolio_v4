@@ -7,8 +7,6 @@ import {
   SiFramer,
   SiFigma,
   SiExpress,
-  SiGraphql,
-  SiJest,
   SiMongodb,
   SiRedux,
   SiVite,
