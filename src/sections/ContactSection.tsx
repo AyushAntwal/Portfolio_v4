@@ -18,13 +18,13 @@ export default function ContactSection() {
           </p>
 
           {/* Contact Icons */}
-          {/* <div className="flex items-center gap-6 mt-4 text-gray-400 text-xl">
+          <div className="flex items-center gap-6 mt-4 text-gray-400 text-xl">
             <a
               href="mailto:ayush@example.com"
               aria-label="Email"
               className="hover:text-indigo-400 transition"
             >
-              <FaEnvelope />
+              {/* <FaEnvelope /> */}Main
             </a>
             <a
               href="https://github.com/yourusername"
@@ -33,7 +33,8 @@ export default function ContactSection() {
               aria-label="GitHub"
               className="hover:text-indigo-400 transition"
             >
-              <FaGithub />
+              {/* <FaGithub /> */}
+              Github
             </a>
             <a
               href="https://linkedin.com/in/yourusername"
@@ -42,19 +43,30 @@ export default function ContactSection() {
               aria-label="LinkedIn"
               className="hover:text-indigo-400 transition"
             >
-              <FaLinkedin />
+              {/* <FaLinkedin /> */}
+              Linked In
+            </a>
+            <a
+              href="/contact"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="hover:text-indigo-400 transition"
+            >
+              {/* <FaLinkedin /> */}
+              Main
             </a>
             <span
               className="flex items-center gap-1 text-gray-500"
               aria-label="Location"
             >
-              <FaMapMarkerAlt />
+              {/* <FaMapMarkerAlt /> */}
+              Location
               <span className="text-sm">Dehradun — Remote-ready</span>
             </span>
-          </div> */}
+          </div>
 
           {/* Contact Form */}
-          <form className="mt-8 flex flex-col gap-4 max-w-md">
+          {/* <form className="mt-8 flex flex-col gap-4 max-w-md">
             <input
               type="text"
               name="name"
@@ -83,7 +95,7 @@ export default function ContactSection() {
               connect
               <BsSend />
             </button>
-          </form>
+          </form> */}
         </div>
 
         {/* Image with shadow bar */}
