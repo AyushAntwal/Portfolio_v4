@@ -1,9 +1,9 @@
 export default function Experiences() {
   const projects = [
     {
-      title: "Interface Kit",
+      title: "Conponentry UI",
       description:
-        "A composable, themeable UI system built with React and TypeScript. Reusable, accessible components styled with Tailwind. Built for design consistency at scale.",
+        "A composable, themeable UI system built with React and TypeScript. Reusable, accessible components styled with Tailwind and MUI. Built for design consistency at scale.",
       links: [
         { label: "Live Preview", href: "#" },
         { label: "Code", href: "#" },
@@ -19,7 +19,7 @@ export default function Experiences() {
       ],
     },
     {
-      title: "Headless Commerce Frontend",
+      title: "Headless Commerce",
       description:
         "A storefront UI connected to Sanity CMS and Stripe Checkout. Fast-loading product views, responsive filtering, and lightweight cart management.",
       links: [

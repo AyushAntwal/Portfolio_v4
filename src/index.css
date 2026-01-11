@@ -9,8 +9,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: white;
+  background-color: #000;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -33,6 +33,90 @@
   }
 }
 
+@layer base {
+  /* Headings */
+  h1,
+  .h1 {
+    @apply text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight
+           text-gray-900 dark:text-gray-100;
+  }
+
+  h2,
+  .h2 {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight
+           text-gray-900 dark:text-gray-100;
+  }
+
+  h3,
+  .h3 {
+    @apply text-2xl sm:text-3xl lg:text-4xl font-semibold
+           text-gray-800 dark:text-gray-200;
+  }
+
+  h4,
+  .h4 {
+    @apply text-xl sm:text-2xl lg:text-3xl font-semibold
+           text-gray-800 dark:text-gray-200;
+  }
+
+  h5,
+  .h5 {
+    @apply text-lg sm:text-xl lg:text-2xl font-medium
+           text-gray-700 dark:text-gray-300;
+  }
+
+  h6,
+  .h6 {
+    @apply text-base sm:text-lg lg:text-xl font-medium
+           text-gray-700 dark:text-gray-300;
+  }
+
+  /* Subtitles */
+  .subtitle1 {
+    @apply text-lg sm:text-xl font-medium
+           text-gray-700 dark:text-gray-300;
+  }
+
+  .subtitle2 {
+    @apply text-base sm:text-lg font-medium
+           text-gray-600 dark:text-gray-400;
+  }
+
+  /* Body text */
+  .body1 {
+    @apply text-base leading-6
+           text-gray-700 dark:text-gray-300;
+  }
+
+  .body2 {
+    @apply text-sm leading-5
+           text-gray-600 dark:text-gray-400;
+  }
+
+  /* Button text */
+  .button {
+    @apply text-sm sm:text-base uppercase tracking-wide
+           text-gray-900 dark:text-gray-100;
+  }
+
+  /* Caption */
+  .caption {
+    @apply text-xs sm:text-sm
+           text-gray-500 dark:text-gray-400;
+  }
+
+  .small {
+    @apply text-xs sm:text-xs
+           text-gray-500 dark:text-gray-400;
+  }
+
+  /* Overline */
+  .overline {
+    @apply text-xs font-semibold uppercase tracking-widest
+           text-gray-500 dark:text-gray-400;
+  }
+}
+
 /* Custom slow spin animation */
 @layer utilities {
   @keyframes spin {
@@ -42,12 +126,13 @@
   }
 
   .animate-spin-slow {
-    animation: spin 90s linear infinite;
+    animation: spin 100s ease-in-out infinite;
   }
 }
 
 @keyframes radial-move {
-  0%, 100% {
+  0%,
+  100% {
     background-position: 100% 100%;
   }
   50% {
@@ -57,7 +142,22 @@
 
 .bg-radial-animate {
   @apply bg-no-repeat bg-cover;
-  background-image: radial-gradient(circle at center, var(--color-gray-950), var(--color-gray-900), var(--color-gray-700));
+  background-image: radial-gradient(
+    circle at center,
+    var(--color-gray-950),
+    var(--color-gray-900),
+    var(--color-gray-700)
+  );
   background-size: 150% 150%;
-  animation: radial-move 9s ease-in-out infinite;
+  animation: radial-move 50s ease-in-out infinite;
+}
+
+.chip {
+  @apply rounded-lg shadow border border-gray-300/30 px-2 py-0.5 bg-gray-300/10 text-white;
+}
+
+.custom-list li::marker {
+  content: "➰"; /* Custom character or emoji */
+  color: #ff69b4;
+  font-size: inherit; /* Adjust size independently of text */
 }

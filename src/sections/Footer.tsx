@@ -77,7 +77,7 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900">
+    <footer className="bg-back mt-20">
       <div className="mx-auto max-w-7xl overflow-hidden px-6 pt-20 sm:pt-24 lg:px-8">
         <nav
           aria-label="Footer"
